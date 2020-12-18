@@ -17,8 +17,8 @@ Here is a short description of what is in this repo:
 ## A text based game of mastermind
 - [What is this game?](https://en.wikipedia.org/wiki/Mastermind_(board_game))
 - [Version without the use of python dictionaries](Jul_2018_Structured_Programming/mastermind_game/mastermind_game.py)
-- [Version with dictionaries](mastermind_game/mastermind_game_dict.py)
+- [Version with dictionaries](Jul_2018_Structured_Programming/mastermind_game/mastermind_game_dict.py)
   - The dictionaries are used to record each player’s name, score for the current game and the number of games won thus far, as well as any other appropriate values.
 - The planning of the game was done through use of top-down design.
-  - [Planning](Jul_2018_Structured_Programming/mastermind_game/mastermind_structure_chart.png)
-  - [Structure Chart](Jul_2018_Structured_Programming/mastermind_game/mastermind_game_planning.txt)
+  - [Planning](Jul_2018_Structured_Programming/mastermind_game/mastermind_game_planning.txt)
+  - [Structure Chart](Jul_2018_Structured_Programming/mastermind_game/mastermind_structure_chart.png)
