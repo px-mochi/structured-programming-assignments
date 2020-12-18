@@ -1,0 +1,80 @@
+Implement top-down design to the problem, showing at least 3 levels of refinement.
+Top level design algorithm:
+def main():
+Print an Introduction
+Get inputs: playerData
+Run MasterMind Game using playerData and further inputs from players
+Print overall winner and print a report to file
+
+Second level design:
+getInput():
+Asks for the number (int) of players playNum through the input function.
+Using playNum, a loop and input function will be used to prompt players for their names.
+
+Game(playerData):
+# Runs one or multiple rounds of MasterMind depending on input
+Create a list to store game information
+Loop while players want to replay:
+    Run one game of MasterMind
+    Update game information per game
+return gameResult, playerData
+
+printSummary:
+Prints a summary using data from Game
+Calculate overall winner using information in playerData
+
+ 
+Third level design:
+Because Game(playerData) requires a lot more information to run, it is split into more functions to run all the MasterMind games needed.
+
+oneGame(playerData):
+Reset score, playerData, and pin data, bestPin, each time it runs, as this function only runs one game of MasterMind.
+Generate the winning code winCode for the game
+Obtain the current player data, turnPlayer and input for each turn
+Run function that checks if they have broken the code
+While players have not broken the code:
+    Run function that checks if they have broken the code
+If player input breaks the code:
+    Print out score and winner data
+    Ask player if they want to play again, change replay variable accordingly
+return replay, oneResult, playerData
+
+byWins(player):
+Since printSummary requires some sort of sorting to find the current winner, this function is used as a key to sort playerData information.
+
+Fourth level design:
+oneTurn(turnPlayer,bestPin,winCode)
+# Runs one single turn, input information will come from a function in the next level
+Check if number of White pins increased
+Check if number of Black pins increased
+Print current score
+If pins increased:
+    Add in new points to score in turnPlayer
+Print updated score
+Update current bestPin information
+If winCode is cracked:
+    Print “Correct guess!”
+return turnPlayer, bestPin
+
+byPoint(player):
+# oneGame(playerData) needed to sort player data by points to calculate the winner
+Returns function as a key to sort playerData information
+
+Fifth level design: 
+guessPin(winCode,name):
+# Checks player guess against winCode, return newPin results
+In a loop for each letter:
+Check through the guess string and winCode string
+If position and colour matches:
+Add “B” to newPin
+Else if colour matches:
+Add “W” to newPin
+
+Print out newPin
+return newPin
+
+ 
+Final level of design:
+getGuess(name):
+name is used in the question when asking for a player’s guess input
+return guess
