@@ -22,3 +22,30 @@ Here is a short description of what is in this repo:
 - The planning of the game was done through use of top-down design.
   - [Planning](Jul_2018_Structured_Programming/mastermind_game/mastermind_game_planning.txt)
   - [Structure Chart](Jul_2018_Structured_Programming/mastermind_game/mastermind_structure_chart.png)
+
+## (Probably outdated) Calculator for total stamp duty payable for a residential property in Singapore
+- [Resources](https://propertynet.sg/what-is-stamp-duty/)
+- [Code](Jul_2018_Structured_Programming/stamp_duty_calculator.py)
+- Code can be improved by catering for other types of incorrect inputs (EG: Wrong date format, non-number inputs for property price)
+
+## Text based code for booking a study room
+- [Code](Jul_2018_Structured_Programming/study_room_booking.py)
+
+## A text based guessing game
+- A simple game application allows a single player to play a guessing game repeatedly.
+- [Code](Jul_2018_Structured_Programming/guessing_game.py)
+
+###### Game Rules
+- The player has 50 chips at the start of the session.
+- Before every new game, the player enters a positive number that is at least 4, e.g., 7.
+A random sequence of whole numbers from 1 to that number is then generated, e.g., 5 2 4 1 6 7 3.
+- The first number is revealed to the player, in this case, 5.
+  - He makes a guess whether the next number is higher (h) or lower (l) than the number just revealed, and then places the number of chips he wishes to bet with.
+  - The player may also choose to skip guessing by entering an empty string.
+- Whether the player makes a guess or skips, the next number is revealed, in this case, 2.
+  - If the player makes a guess and the guess is correct, he wins some chips, an amount described under the heading Bet Amount.
+  - Otherwise, he loses the chips he bets with.
+  - Display the number of chips the player has after computing his win or loss, or after his skip, on the console (output screen) as well as into a file, Q3Out.txt.
+- The game continues with the player guessing or skipping until the third number from the end (or right) of the sequence is revealed, in this case 6. Then the game ends.
+
+
